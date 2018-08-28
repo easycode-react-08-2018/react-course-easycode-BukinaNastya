@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>classwork-1</title>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script>
+        const mountNode = document.getElementById('app');
+
+        const h1 = React.createElement(
+            'h1', 
+            {helloworld: 'yes'}, 
+            'Hello world'
+        );
+        const header = React.createElement(
+            'header',
+            null,
+            h1,
+            React.createElement(
+                'div',
+                {className: 'qwerty'},
+                'App title'
+            ),
+        );
+
+        const createFunc = (arg) => {
+            return React.createElement(
+                'h2',
+                null,
+                arg
+            )
+        }
+
+        ReactDOM.render(createFunc('my content'), mountNode);
+    </script>
+</body>
+</html>
