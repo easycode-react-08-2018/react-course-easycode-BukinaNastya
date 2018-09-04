@@ -2,35 +2,33 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-const url = 'https://api.github.com/users';
+import {ResizeableBlock} from './Resizeble-block.js';
+
+// const url = 'https://api.github.com/users';
 
 class App extends Component {
-state = {
-  value: '',
-  userName: '',
-}
-
 // FetchRepos(){
   
 // }
 
-FetchOrgs(){
-  fetch(url + '/users/' + this.state.value + '/repos').then(response => response.json())
-  .then (user => {
-    console.log(user.userName)
-  })
-}
+// FetchOrgs(){
+//   fetch(url + '/users/' + this.state.value + '/repos').then(response => response.json())
+//   .then (user => {
+//     console.log(user.userName)
+//   })
+// }
 
-onChange = (event) => {
-  this.setState({
-    value: event.target.value,
-  });
-};
+// onChange = (event) => {
+//   this.setState({
+//     value: event.target.value,
+//   });
+// };
 
   render() {
     return (
       <div className="App">
-        <input 
+      <ResizeableBlock />
+        {/* <input 
           value={this.state.value} 
           onChange={this.onChange}
           />
@@ -40,7 +38,7 @@ onChange = (event) => {
         >Repositories</button>
         <button
         onClick={this.FetchOrgs()}
-        >Organization</button>
+        >Organization</button> */}
       </div>
     );
   }
